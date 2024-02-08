@@ -1,6 +1,97 @@
-body {
-	margin: 0;
-	font-family: sans-serif;
-	background-color: #333;
-	/* background-image: url(../assets/images/sleep-cat.jpeg); */
+*,
+:after,
+:before{
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-body: #283757;
+    --bg-board: #e0d9c8;
+    --user-board: #48b8b7;
+    --pc-board: #ef784b;
+    --text: #e7b236;
+}
+
+body{
+    font-family: sans-serif;
+    text-align: center;
+    background-color: var(--bg-body);
+    color: var(--text);
+}
+
+.game, .boards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.bingo{
+    display: grid;
+    grid-template-columns: repeat(11,50px);
+    background-color: var(--bg-board);
+    padding: 0.3rem;
+}
+
+.bingo-number{
+    align-items: center;
+    border: 1px solid var(--text);
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    background-color: var(--bg-board);
+}
+
+.button{
+    margin: 1rem;
+}
+
+.board{
+    display: grid;
+    grid-template-columns: repeat(5,80px);
+    grid-template-rows: repeat(3,80px);
+    padding: 0.4rem;
+    background-color: var(--bg-board);
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.number{
+    align-items: center;
+    display: flex;
+    font-size: 2rem;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+
+.number-user{
+    border: 2px solid var(--user-board);
+    color: var(--user-board);
+}
+
+.number-pc{
+    border: 2px solid var(--pc-board);
+    color: var(--pc-board);
+}
+
+.number-user-correct{
+    border: 2px solid var(--bg-board);
+    color: var(--bg-board);
+    background-color: var(--user-board);
+}
+
+.number-pc-correct{
+    border: 2px solid var(--bg-board);
+    color: var(--bg-board);
+    background-color: var(--pc-board);
+}
+
+.hidden{
+    display: none;
+}
+
+.bingo-number-appeared{
+    border: 1px solid var(--bg-board);
+    color: var(--bg-board);
+    background-color: var(--text);
 }

@@ -1,3 +1,7 @@
-import { sayHello } from './demo';
+import { createGame, resetGame, startGame } from "./bingo-functions";
+import { buttoRestartElement, buttoStartElement } from "./dom";
 
-sayHello();
+createGame();
+
+buttoStartElement.addEventListener('click', startGame);
+buttoRestartElement.addEventListener('click', resetGame);
